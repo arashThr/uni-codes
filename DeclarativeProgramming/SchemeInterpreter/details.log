@@ -1,0 +1,157 @@
+INFO : Lexical gives : ('1392',)
+INFO : Lexical gives : ['quote', 'a']
+INFO : Lexical gives : ['define', 'x', '3']
+INFO : Lexical gives : (['define', 'x', '2'], ['set!', 'x', '3'], 'x')
+INFO : set! on : x
+INFO : Lexical gives : (['define', 'x', '2'], ['+', 'x', 'x'])
+INFO : + will be applied
+INFO : List of arguments : [2, 2]
+INFO : Lexical gives : (['define', ['f', 'x'], ['*', '2', 'x']], ['f', '5'])
+INFO : f will be applied
+INFO : List of arguments : [5]
+INFO : * will be applied
+INFO : List of arguments : [2, 5]
+INFO : Lexical gives : ['+', '2', '2', '2']
+INFO : + will be applied
+INFO : List of arguments : [2, 2, 2]
+INFO : Lexical gives : (['define', ['g', 'x', 'y'], ['*', 'x', 'y']], ['g', '4', '10'])
+INFO : g will be applied
+INFO : List of arguments : [4, 10]
+INFO : * will be applied
+INFO : List of arguments : [4, 10]
+INFO : Lexical gives : (['define', 'h', ['lambda', ['x'], ['*', 'x', 'x']]], ['h', '7'])
+INFO : h will be applied
+INFO : List of arguments : [7]
+INFO : * will be applied
+INFO : List of arguments : [7, 7]
+INFO : Lexical gives : (['define', ['min', 'a', 'b'], ['if', ['<', 'a', 'b'], 'a', 'b']], ['min', '3', '4'])
+INFO : min will be applied
+INFO : List of arguments : [3, 4]
+INFO : < will be applied
+INFO : List of arguments : [3, 4]
+INFO : Lexical gives : (['define', ['f', 'x'], ['+', 'x', 'x'], ['*', 'x', 'x']], ['f', '7'])
+INFO : f will be applied
+INFO : List of arguments : [7]
+INFO : + will be applied
+INFO : List of arguments : [7, 7]
+INFO : * will be applied
+INFO : List of arguments : [7, 7]
+INFO : Lexical gives : [['lambda', ['x'], ['+', 'x', 'x'], ['*', 'x', 'x']], '7']
+INFO : ['lambda', ['x'], ['+', 'x', 'x'], ['*', 'x', 'x']] will be applied
+INFO : List of arguments : [7]
+INFO : + will be applied
+INFO : List of arguments : [7, 7]
+INFO : * will be applied
+INFO : List of arguments : [7, 7]
+INFO : Lexical gives : (['define', ['min', 'a', 'b'], ['cond', [['<', 'a', 'b'], 'a'], [['=', 'a', 'b'], '0'], ['else', 'b']]], ['min', '5', '4'])
+INFO : min will be applied
+INFO : List of arguments : [5, 4]
+INFO : < will be applied
+INFO : List of arguments : [5, 4]
+INFO : = will be applied
+INFO : List of arguments : [5, 4]
+INFO : Lexical gives : (['define', ['f', 'x'], ['define', 'y', '0'], ['set!', 'y', '2'], 'y'], ['f', '5'])
+INFO : f will be applied
+INFO : List of arguments : [5]
+INFO : set! on : y
+INFO : Lexical gives : (['define', ['factorial', 'n'], ['if', ['=', 'n', '0'], '1', ['*', 'n', ['factorial', ['-', 'n', '1']]]]], ['factorial', '5'])
+INFO : factorial will be applied
+INFO : List of arguments : [5]
+INFO : = will be applied
+INFO : List of arguments : [5, 0]
+INFO : * will be applied
+INFO : factorial will be applied
+INFO : - will be applied
+INFO : List of arguments : [5, 1]
+INFO : List of arguments : [4]
+INFO : = will be applied
+INFO : List of arguments : [4, 0]
+INFO : * will be applied
+INFO : factorial will be applied
+INFO : - will be applied
+INFO : List of arguments : [4, 1]
+INFO : List of arguments : [3]
+INFO : = will be applied
+INFO : List of arguments : [3, 0]
+INFO : * will be applied
+INFO : factorial will be applied
+INFO : - will be applied
+INFO : List of arguments : [3, 1]
+INFO : List of arguments : [2]
+INFO : = will be applied
+INFO : List of arguments : [2, 0]
+INFO : * will be applied
+INFO : factorial will be applied
+INFO : - will be applied
+INFO : List of arguments : [2, 1]
+INFO : List of arguments : [1]
+INFO : = will be applied
+INFO : List of arguments : [1, 0]
+INFO : * will be applied
+INFO : factorial will be applied
+INFO : - will be applied
+INFO : List of arguments : [1, 1]
+INFO : List of arguments : [0]
+INFO : = will be applied
+INFO : List of arguments : [0, 0]
+INFO : List of arguments : [1, 1]
+INFO : List of arguments : [2, 1]
+INFO : List of arguments : [3, 2]
+INFO : List of arguments : [4, 6]
+INFO : List of arguments : [5, 24]
+INFO : Lexical gives : (['define', ['f', 'x'], ['begin', ['+', 'x', 'x'], ['*', 'x', 'x']]], ['f', '7'])
+INFO : f will be applied
+INFO : List of arguments : [7]
+INFO : + will be applied
+INFO : List of arguments : [7, 7]
+INFO : * will be applied
+INFO : List of arguments : [7, 7]
+INFO : Lexical gives : ['begin', ['+', '2', '2'], ['*', '3', '4']]
+INFO : + will be applied
+INFO : List of arguments : [2, 2]
+INFO : * will be applied
+INFO : List of arguments : [3, 4]
+INFO : Lexical gives : ['if', ['<', '1', '1'], '2', '3']
+INFO : < will be applied
+INFO : List of arguments : [1, 1]
+INFO : Lexical gives : ['g', '10', '20']
+INFO : g will be applied
+INFO : List of arguments : [10, 20]
+INFO : * will be applied
+INFO : List of arguments : [10, 20]
+INFO : Lexical gives : ['define', ['make-account', 'balance'], ['define', ['withdraw', 'amount'], ['if', ['<', 'amount', 'balance'], ['begin', ['set!', 'balance', ['-', 'balance', 'amount']], 'balance'], ['quote', 'Insufficient_funds']]], ['define', ['deposit', 'amount'], ['set!', 'balance', ['+', 'balance', 'amount']], 'balance'], ['define', ['dispatch', 'm'], ['cond', [['=', 'm', ['quote', 'withdraw']], 'withdraw'], [['=', 'm', ['quote', 'deposit']], 'deposit'], ['else', ['quote', 'Unknown_request']]]], 'dispatch']
+INFO : Lexical gives : (['define', 'acc', ['make-account', '50']], [['acc', ['quote', 'deposit']], '40'], [['acc', ['quote', 'withdraw']], '10'], [['acc', ['quote', 'withdraw']], '110'], ['define', 'acc2', ['make-account', '100']])
+INFO : make-account will be applied
+INFO : List of arguments : [50]
+INFO : ['acc', ['quote', 'deposit']] will be applied
+INFO : acc will be applied
+INFO : List of arguments : ["'deposit"]
+INFO : = will be applied
+INFO : List of arguments : ["'deposit", "'withdraw"]
+INFO : = will be applied
+INFO : List of arguments : ["'deposit", "'deposit"]
+INFO : List of arguments : [40]
+INFO : + will be applied
+INFO : List of arguments : [50, 40]
+INFO : set! on : balance
+INFO : ['acc', ['quote', 'withdraw']] will be applied
+INFO : acc will be applied
+INFO : List of arguments : ["'withdraw"]
+INFO : = will be applied
+INFO : List of arguments : ["'withdraw", "'withdraw"]
+INFO : List of arguments : [10]
+INFO : < will be applied
+INFO : List of arguments : [10, 90]
+INFO : - will be applied
+INFO : List of arguments : [90, 10]
+INFO : set! on : balance
+INFO : ['acc', ['quote', 'withdraw']] will be applied
+INFO : acc will be applied
+INFO : List of arguments : ["'withdraw"]
+INFO : = will be applied
+INFO : List of arguments : ["'withdraw", "'withdraw"]
+INFO : List of arguments : [110]
+INFO : < will be applied
+INFO : List of arguments : [110, 80]
+INFO : make-account will be applied
+INFO : List of arguments : [100]

@@ -1,0 +1,52 @@
+Scheduler algorithms simulator
+
+To run :
+python scheduler.py [XML-file]
+
+Capabilities :
+Supports all major algorithm
+Swap in/out processes in case of lack of enough memory
+Reads input from an XML file
+All types of IO supported
+IO can run concurrently
+Priority queue used in IO
+Calculates process statistics ( wait time, etc. )
+
+Sample output :
+NOW ...
+System starts up
+002.000: Algorithm SPN is in use
+004.000: Process 001 Created
+004.000: Process 001 -> readyQ
+004.000: Process 001 -> CPU
+006.100: Algorithm MLFQ is in use
+007.300: Process 002 Created
+007.300: Process 002 -> readyQ
+009.100: Process 001 -> WaitingQ
+009.200: Process 001 -> Finished CPU
+009.200: Process 001 -> Entered RamQ
+009.200: Process 002 -> CPU
+009.200: Process 001 -> Start Ram
+009.500: Process 003 Created
+009.500: Process 003 -> readyQ
+012.100: Algorithm LOTTERY is in use
+012.300: Process 002 -> WaitingQ
+012.400: Process 002 -> Finished CPU
+012.400: Process 003 -> CPU
+012.400: Process 002 -> Entered DiskQ
+012.400: Process 002 -> Start Disk
+012.800: Process 001 -> Finished Ram
+012.800: Process 001 Finished : W: 3.7 ,T: 8.8 ,U: 42%
+016.100: Process 003 -> WaitingQ
+016.200: Process 003 -> Entered DiskQ
+017.000: Process 002 -> Finished Disk
+017.000: Process 003 -> Start Disk
+017.100: Process 002 -> readyQ again
+017.200: Process 003 -> Finished CPU
+017.200: Process 002 -> CPU
+019.200: Process 002 Finished : W: 6.7 ,T: 12.0 ,U: 55%
+021.700: Process 003 -> Finished Disk
+021.800: Process 003 -> readyQ again
+021.900: Process 002 -> Finished CPU
+021.900: Process 003 -> CPU
+023.000: Process 003 Finished : W: 8.7 ,T: 13.6 ,U: 63%

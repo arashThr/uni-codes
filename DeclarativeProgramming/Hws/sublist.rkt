@@ -1,0 +1,20 @@
+#lang scheme
+(define (find-sublist lst sub)
+  (define (check-sub l sub)
+    (if (null? sub)
+        #t
+        (if (= (car l) (car sub))
+            (check-sub (cdr l) (cdr sub))
+            #f)))
+  
+  (define (iter lst sub index)
+    (if (check-sub lst sub)
+        (begin (display index)
+               (newline))
+        #f)
+    (if (null? (cdr lst))
+        (display "Finished")
+        (iter (cdr lst) sub (+ index 1))))
+  (if (< (length lst) (length sub))
+      (display "Sublist is bigger than list !")
+      (iter lst sub 0)))

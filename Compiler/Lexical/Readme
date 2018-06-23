@@ -1,0 +1,5 @@
+Compiler first phase - Lexical Analyser
+
+To start the program and apply it to sample file, test.c enter : ./run
+Default mode ( ./lexical ) reads from standard input.
+

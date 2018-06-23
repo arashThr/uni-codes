@@ -1,0 +1,24 @@
+<scheduler memory='70'>
+    <algorithms>
+        <algorithm start='2'>SPN</algorithm>
+        <algorithm start='6' quantum='2'>MLFQ</algorithm>
+        <algorithm start='12' quantum='2'>LOTTERY</algorithm>
+    </algorithms>
+    <processes>
+        <process start='4' memory='65'>
+            <cpu>5.1</cpu>
+            <io name='RAM' priority='5'>3.7</io>
+        </process>
+        <process start='7.2' memory='32'>
+            <cpu>3.2</cpu>
+            <io name='DISK' priority='2'>4.3</io>
+            <cpu>2.1</cpu>
+        </process>
+        <process start='9.4' memory='55'>
+            <cpu>3.8</cpu>
+            <io name='NETWORK' priority='2'>2.9</io>
+            <cpu>1.1</cpu>
+        </process>
+    </processes>
+</scheduler>
+
